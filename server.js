@@ -22,7 +22,7 @@ app.get("/scrape", function(req, res) {
         const $ = cheerio.load(response.data);
 
         $("article h2").each(function(i, element) {
-            let result = {};
+            const result = {};
 
             result.title = $(this)
             .children("p")
