@@ -1,0 +1,31 @@
+.jumbotron {
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 30px;
+}
+
+.btn-info {
+    float: right;
+}
+
+#notes {
+    float: right;
+    width: 25%;
+}
+
+textarea, input {
+    display: block;
+    width: 100%;
+}
+
+#titleinput {
+    height: 25px;
+    font-size: 14px;
+    background-color: blue;
+}
+
+#bodyinput {
+    height: 200px;
+    font-size: 12px;
+    background-color: brown;
+}
