@@ -12,13 +12,13 @@ const PORT = process.env.PORT || 8080;
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
-
+app.use(bodyParser.urlencoded({ extended: true }));
 const controller = require("./controller/articles_controller.js")(app);
 // app.use('/', controller)
 
 mongoose.Promise = Promise;
 app.use(logger("dev"));
-app.use(bodyParser.urlencoded({ extended: true }));
+
 app.use(express.static("public"));
 
 mongoose.connect("mongodb://localhost/atl11");

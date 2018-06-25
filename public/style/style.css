@@ -4,7 +4,10 @@
     padding: 30px;
 }
 
-.btn-info {
+.btn-note {
+    float: right;
+}
+.btn-save {
     float: right;
 }
 

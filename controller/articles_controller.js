@@ -95,10 +95,12 @@ app.get("/articles/:id", function(req, res){
 //     });
 // });
 
-app.post("/articles/", function(req, res) {
+app.post("/articles/:id", function(req, res) {
+    console.log(req.body)
     db.Note.create(req.body)
+    
       .then(function(dbNote) {
-        return db.Article.findOneAndUpdate({ _id: req.params.id }, { Note: dbNote._id }, { new: true });
+        return db.Article.findOneAndUpdate({ _id: req.params.id }, { note: dbNote._id }, { new: true });
       })
       .then(function(dbArticle) {
         res.json(dbArticle);
