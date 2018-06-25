@@ -28,11 +28,15 @@ $.getJSON("/articles", function(data) {
 //     window.location=url;
 // });
 // $.getJSON("/articles", function(data) {
-    // $(document).on("click"), ".scrape", function(){
-    //     $.ajax({
-    //         method: "GET",
-    //         url: "/scrape"
-    //     })}
+    $(document).on("click"), ".scrape", function(event){
+        $.ajax("/api/scrape", {
+            type: "GET",
+            data: results
+        }).then(function(){
+            console.log("Scrape completed");
+            location.reload();
+        })
+    }
 
 $(document).on("click", ".btn-info", function(){
     console.log("HI")

@@ -21,7 +21,7 @@ app.use(logger("dev"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost/atl15");
+mongoose.connect("mongodb://localhost/atl11");
 
 
 app.listen(PORT, function(){
