@@ -52,8 +52,8 @@ $(document).on("click", ".btn-info", function(){
     .then(function(data) {
         console.log(data);
         $("#notes").append("<h2>" + data.title + "</h2>");
-        $("#notes").append("<input id='titleinput' name='title' >");
-        $("#notes").append("<textarea id='bodyinput' name='body'></textarea>");
+        $("#notes").append("<input class='panel-heading panel panel-default' id='titleinput' name='title' >");
+        $("#notes").append("<textarea class='panel-body panel panel-default' id='bodyinput' name='body'></textarea>");
         $("#notes").append("<button data-id='" + data._id + "' id='savenote'>Save Note</button>");
   
         if (data.Note) {

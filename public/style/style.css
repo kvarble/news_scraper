@@ -10,14 +10,14 @@
 
 #notes {
     float: right;
-    width: 25%;
+    width: 30%;
 }
 
-/* textarea, input {
+textarea, input {
     display: block;
     width: 100%;
 }
-
+/* 
 #titleinput {
     height: 25px;
     font-size: 14px;
