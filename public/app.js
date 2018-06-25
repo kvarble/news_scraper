@@ -28,8 +28,11 @@ $.getJSON("/articles", function(data) {
 //     window.location=url;
 // });
 // $.getJSON("/articles", function(data) {
-    $(document).on("click"), ".scrape", function(){
-        get("/scrape")}
+    // $(document).on("click"), ".scrape", function(){
+    //     $.ajax({
+    //         method: "GET",
+    //         url: "/scrape"
+    //     })}
 
 $(document).on("click", ".btn-info", function(){
     console.log("HI")

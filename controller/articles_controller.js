@@ -20,7 +20,6 @@ module.exports = function (app) {
             res.render("index", hbsObject);
         })
     })
-    
     app.get("/scrape", function(req, res) {
         axios.get("http://www.theatlantic.com/").then(function(response){
             const $ = cheerio.load(response.data);
@@ -56,7 +55,7 @@ module.exports = function (app) {
         });
     });
     
-}
+    
 
 // app.get("/articles", function(req, res){
 //     db.Article.find()
@@ -102,7 +101,7 @@ app.post("/articles/", function(req, res) {
         return db.Article.findOneAndUpdate({ _id: req.params.id }, { Note: dbNote._id }, { new: true });
       })
       .then(function(dbArticle) {
-        res.render(dbArticle);
+        res.json(dbArticle);
       })
       .catch(function(err) {
         res.json(err);
@@ -122,6 +121,6 @@ app.post("/articles/", function(req, res) {
 //     });
 // });
 
-
+}
 
 
